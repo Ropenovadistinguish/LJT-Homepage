@@ -45,7 +45,7 @@ jobs:
           uglifyjs assets/js/plugins/jquery.greedy-navigation.js assets/js/_main.js assets/js/theme.js -c -m -o assets/js/main.min.js
       - name: Configure GitHub Pages
         id: pages
-        uses: actions/configure-pages@v6.0.0
+        uses: actions/configure-pages@v5
         with:
           enablement: true
       - name: Build with Jekyll
@@ -54,7 +54,7 @@ jobs:
         env:
           JEKYLL_ENV: production
       - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v5.0.0
+        uses: actions/upload-pages-artifact.v5.0.0@v5.0.0
 
   # Deployment job
   deploy:
